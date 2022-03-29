@@ -1,0 +1,57 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/users.css">
+    <title>LOGIN</title>
+</head>
+<header>
+     <!--INICIO DLE HEADER-->
+  <%- include("../partials/header") %>
+  <!--FIN DEL HEADER-->
+
+</header>
+<body>
+    <section>
+        <div class="imgBx">
+            <img src="images/LQEQ.jpg">
+        </div>
+        <div class="contentBx">
+            <div class="formBx">
+                <h2>Login</h2>
+                <% if (locals.errors) {
+                    errors.forEach(error => { %>
+                   <p class="feedback is-danger"> <%= error.msg %></p>
+              <% }) 
+                    } %> 
+                <form action="/users/login" method="POST">
+                    <div class="inputBx">
+                        <span>Email</span>
+                        <input type="email" name="email" value="<%= locals.old && old.email ? old.email : '' %>">
+                    </div>
+
+                    <div class="inputBx">
+                        <span>Password</span>
+                        <input type="password" name="password">
+                    </div>
+
+                    <div class="remember">
+                        <label><input type="checkbox" name="recordame">Recordar usuario</label>
+                    </div>
+
+                    <div class="inputBx">
+                        <input type="submit" value="login" name="">
+                    </div>
+
+                    <div class="inputBx">
+                        <p>¿Hay algun problema? Contacta al soporte<a href="/contacto">Contacto</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
