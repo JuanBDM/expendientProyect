@@ -1,0 +1,63 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>REGISTRO</title>
+</head>
+
+<body>
+    <img class="img" src="../images/PROGRESS (2).jpg">
+    <section class="register">
+      
+        <div class="contentBxR">
+            <div class="formBxR">
+                <h2 class="titulo">REGISTRO</h2>
+                <% if (locals.errors) {
+                     errors.forEach(error => { %>
+                    <p class="feedback is-danger"> <%= error.msg %></p>
+               <% }) 
+                     } %> 
+                <form action="/users/register"  method="POST" >
+                    <div class="inputBxR">
+                        <span>Nombre</span>
+                        <input type="text" class="form-control" name="full_name" id="full_name" 
+                        value="<%= locals.old && old.full_name ? old.full_name : '' %>">
+                    </div>
+
+                    <div class="inputBxR">
+                        <span>Email</span>
+                        <input type="email" name="email" 
+                        value="<%= locals.old && old.email ? old.email: '' %>">
+                    </div>
+
+
+                    <div class="inputBxR">
+                        <span>Contraseña</span>
+                        <input type="password" name="password">
+                    </div>
+
+                    <div class="inputBxR">
+                        <span>Imagen </span>
+                        <input type="file" name="userImage">
+                    <% if (locals.errors && errors.userImage) { %>
+                        <div>
+                            <%= errors.userImage.msj %>
+                        </div>
+                        <% } %>
+                    </div>
+
+                    
+                    <div class="inputBxR">
+                        <input type="submit" value="Registrarme"  name="">
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
