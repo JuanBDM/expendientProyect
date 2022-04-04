@@ -35,5 +35,8 @@ router.get('/register', usersController.register);
 router.post('/register', /*registerValidations*/ uploadFile.single('userImage'),  usersController.create);
 
 
+
+
+
  
 module.exports = router;

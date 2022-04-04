@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Esta descripción es la que aparece en los buscadores debajo de la URL" />
+	<link href="/css/practica7.css" rel="stylesheet" type="text/css" />
+	<link href="/css/formulario.css" rel="stylesheet" type="text/css" />
+	<link href="./css/resets.css" rel="stylesheet" type="text/css" />
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,500,600,700,800&display=swap" rel="stylesheet">
+	<title>Crear expediente</title>
+</head>
+
+<body>
+	<header>
+		<a href="" class='logo'>
+			<img src="/images/anashepng.png" />
+		</a>
+		<nav>
+			<a class="ultimos" href="">Últimos artículos</a>
+			<a href="">Popular</a>
+			<a href="">Tecnología</a>
+		</nav>
+		<div class="options">
+			<img src="./img/Search.png" />
+			<img src="./img/User.png" />
+			<!-- <div class="userMenu">
+					<a href="">Login</a>
+					<a href="">Registrarme</a>
+				</div> -->
+		</div>
+
+	</header>
+	<main>
+		<h1>Formulario de expediente
+        </h1>
+		<form action="/expedientes/create" method="post">
+			<div class='field'>
+                <div class='field'>
+                    <label>N° Expediente A131</label>
+					
+                    <input name='numero_expedient' type='number' required minlength="1" maxlength="4" />
+                </div>			
+
+            <div class='field'>
+				<label for="">
+                    <span>Fecha inicio</span>
+                    <input type="date" name="fecha_inicio" />
+                </label>
+            </div>
+            
+			<div class='field'>
+				<label>Tipo de expediente</label>
+				<select name='tipo_expediente' required>
+					<option selected disabled>Sel. una opción</option>
+					<option>Compra</option>
+					<option>Comisión</option>
+					<option>Servicio</option>
+				</select>
+			</div>
+			<div class='field'>
+				<label spellcheck= "true">Asunto</label>
+				<input name='asunto' type='text'autocomplete />
+			</div>
+			<div class='field'>
+				<label spellcheck= "true">Proveedor:</label>
+				<input name='proveedor' type='text' autocomplete />
+			</div>
+			
+			
+			<div class='field'>
+				<label>Estado</label>
+				<select name='estado' required>
+					<option selected disabled>Sel. una opción</option>
+					<option>Inicio</option>
+					<option>SG</option>
+					<option>Pliego y Publicación</option>
+                    <option>Apertura y Preadjudicación</option>
+					<option>Dictamen</option>
+					<option>Resolución</option>
+                    <option>Tribunal de Cuenta</option>
+					<option>Orden de Pago</option>
+					<option>Contaduria</option>
+                    <option>Tesorería</option>
+					<option>Pago</option>
+				</select>
+			</div> 
+
+            <div class='field'>
+				<label for="">
+                    <span>Fecha de Estado</span>
+                    <input type="date"  name="fecha_estado" />
+                </label>
+            </div>
+
+			<div class="field">
+				<label for="precio">Monto</label>
+				<input type="text" name="monto" placeholder="$"> 
+			
+			 </div> 
+
+			<div class='submit'>
+				<button>
+					Cargar Expediente
+				</button>
+			</div>
+		</form>
+	</main>
+</body>
+
+</html>

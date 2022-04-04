@@ -1,0 +1,30 @@
+body{
+	margin: 0;
+}
+
+h1{
+	margin: 0;
+}
+
+a{
+	text-decoration: none;
+
+	color: inherit;
+}
+
+ol{
+	padding-inline-start: 0;
+}
+li{
+	list-style: none;
+}
+textarea{
+	font: inherit;
+}
+input{
+	border: none;
+}
+
+button{
+	border: none;
+}

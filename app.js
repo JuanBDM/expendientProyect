@@ -7,6 +7,7 @@ const session = require('express-session');
 //rutas
 const mainRouter = require("./routes/mainRouter");
 const usersRouter = require("./routes/usersRoutes");
+const expedientesRouter = require('./routes/expedientesRouter');
 
 //app set
 app.set('view engine', 'ejs');
@@ -30,5 +31,6 @@ app.use(session({
 }));
 
 
+app.use("/expedientes", expedientesRouter);
 app.use("/users", usersRouter);
 app.use("/", mainRouter);

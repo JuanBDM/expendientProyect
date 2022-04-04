@@ -1,0 +1,35 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/list.css">
+    <title>Lista Expedientes</title>
+</head>
+
+<body>
+    
+<main>
+<!-- Esta es la pagina de producto "completar" -->
+<div>
+    <label for="gsearch">Buscar expediente: </label>
+    <input type="search" id="gsearch" name="gsearch">
+    <input type="submit" value="Submit">
+</div>
+<h3 class="mainTitle_productList"><%= expedientes.asunto %> </h3>
+<% for(let i = 0; i < expedientes.length; i++) { %>
+    <div class="containerProds_ProdList">
+        <div class="infoContainer_prodList">
+            <h4 class="title_ProdList"> Proveedor: <%= expedientes[i].proveedor %></h4>
+            <p class="price_prodList">Fecha: <%= expedientes[i].fecha_estado %> </p>
+            <p class="description_prodList">Estado actual: <%= expedientes[i].estado %></p>
+        </div>
+        <button><a href="/expedientes/detalle/<%= expedientes[i].id %>" class="editar"> Actualizar expedientes</a></button>
+        <button><a href="/expedientes/edit/<%= expedientes[i].id %>" class="editar"> edit</a></button>
+    </div>
+<% } %>
+</a> 
+</main>
+
+</body>

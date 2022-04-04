@@ -1,0 +1,245 @@
+html{
+	font-family: 'Montserrat', sans-serif;
+}
+
+/*HEADER*/
+header{
+	display: flex;
+	justify-content: space-between;
+
+	box-sizing: border-box;
+	width: 100%;
+	height: 4rem;
+	padding: 0 5rem;
+
+	background-color: white;
+}
+
+.logo{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.logo img{
+	height: 3rem;
+}
+
+nav{
+	display: flex;
+	align-items: center;
+}
+
+nav a{
+	font-size: 0.9rem;
+	font-weight: 600;
+
+	display: flex;
+	align-items: center;
+
+	height: 100%;
+	padding: 0 1rem;
+
+	color: #474747;
+}
+
+.ultimos{
+	font-weight: 700;
+
+	color: black;
+}
+
+.options{
+	position: relative;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	width: 7rem;
+}
+
+.options img:first-child{
+	width: 1.75rem;
+}
+
+.options img{
+	width: 2rem;
+}
+
+.userMenu{
+	position: absolute;
+	right: 0;
+	bottom: -5.35rem;
+
+	display: flex;
+	flex-direction: column;
+
+	background-color: lightgray;
+}
+
+.userMenu a{
+	padding: 0.75rem 2rem;
+}
+
+/*MAIN*/
+
+/***BANNER***/
+
+.sctBanner{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+
+	padding: 3rem 0;
+
+	background-image: url('../img/BackgroundBanner.png');
+}
+
+.banner{
+	height: 15rem;
+}
+
+h1{
+	font-size: 2rem;
+	font-weight: 600;
+
+	color: white;
+}
+
+.escritor{
+	display: flex;
+	align-items: center;
+}
+
+.avatar{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 2.5rem;
+	height: 2.5rem;
+
+	border-radius: 50%;
+	background-color: white;
+}
+
+.avatar img{
+	height: 1.25rem;
+}
+
+.descripcion{
+	font-size: 0.8rem;
+	font-weight: 600;
+
+	display: flex;
+	flex-direction: column;
+
+	padding-left: 1rem;
+
+	text-align: center;
+
+	color: white;
+}
+
+/***ARTÍCULO***/
+
+.info{
+	padding: 3rem 0;
+}
+
+.divVideo{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+#tituloVideo{
+	font-weight: 600;
+
+	padding-bottom: 3rem;
+
+	text-transform: uppercase;
+
+	color: rgb(58, 58, 58);
+}
+
+.videoCurso{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.videoCurso iframe{
+	height: 20rem;
+
+	border-radius: 10px;
+}
+
+.indiceVideo{
+	display: flex;
+	flex-direction: column;
+
+	margin: 0 3rem;
+	padding: 2.75rem 2.25rem;
+
+	border-radius: 20px;
+	background-color: #f2f3ff;
+}
+
+#tituloAtajos{
+	font-size: 1.1rem;
+	font-weight: 600;
+
+	margin-bottom: 0.75rem;
+}
+
+ol{
+	display: flex;
+	align-items: left;
+	flex-direction: column;
+}
+
+li{
+	font-size: 0.9rem;
+	font-weight: 600;
+
+	padding: 0.2rem;
+	padding-left: 1rem;
+}
+
+/*** FUERA DE CAMARA ***/
+
+
+article{
+	font-weight: 600;
+
+	width: 60%;
+	margin: auto;
+	padding-top: 7rem;
+}
+
+.subtitle{
+	display: flex;
+	align-items: center;
+
+	margin-top: 3rem;
+	margin-bottom: 1.5rem;
+	padding-left: 0.5rem;
+}
+
+.subtitle img{
+	height: 3.5rem;
+}
+
+.subtitle span{
+	font-size: 1.2rem;
+	font-weight: 800;
+
+	padding-left: 1.5rem;
+
+	text-transform: uppercase;
+
+	color: #474747;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Esta descripción es la que aparece en los buscadores debajo de la URL" />
+	<link href="/css/practica7.css" rel="stylesheet" type="text/css" />
+	<link href="/css/formulario.css" rel="stylesheet" type="text/css" />
+	<link href="/css/resets.css" rel="stylesheet" type="text/css" />
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,500,600,700,800&display=swap" rel="stylesheet">
+	<title>Detalle</title>
+</head>
+
+    <body>
+                <div class='field'>
+                    <label><%= expedientes.numero_expedient %></label>
+                </div>
+
+                <div class='field'>
+                    <label><%= expedientes.fecha_inicio%></label>
+                </div>
+
+                <div class='field'>
+                    <label><%= expedientes.fecha_inicio%></label>
+                </div>
+
+                <div class='field'>
+                    <label><%= expedientes.tipo_expediente%></label>
+                </div>
+
+                <div class='field'>
+                    <label><%= expedientes.asunto%></label>
+                </div>
+
+                <div class='field'>
+                    <label><%= expedientes.proveedor%></label>
+                </div>
+
+                <div class='field'>
+                    <label><%= expedientes.estado%></label>
+                </div>
+
+                <div class='field'>
+                    <label><%= expedientes.fecha_estado%></label>
+                </div>
+
+                <div class='field'>
+                    <label>$ <%= toThousand(expedientes.monto) %></label>
+                </div>
+
+
+            <a href="/expedientes/edit/<%= expedientes.id %> " class="detail-editar-prod">Editar Expediente</a>
+            <form action="/expedientes/delete/<%= expedientes.id %>?_method=DELETE" method="post">
+                <button type="submit">Eliminar</button>
+            </form>
+        </main>
+    </body>
+   
+</html

@@ -1,0 +1,1994 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* HEADER */
+  header {
+    background-color: #FE771F;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 15vw;
+    padding-left: 40px;
+    max-height: 150px;
+  
+  }
+  
+  header a img {
+    width: 30vw;
+    max-width: 150px;
+    max-height: 100px;
+  }
+  
+  .menu-desktop,
+  .barraBusqueda {
+    display: none;
+  }
+  
+  .fa-bars {
+    font-size: 50px;
+  }
+  
+  
+  /* menumobile */
+  #menuToggle
+  {
+    display: block;
+    position: relative;
+    top: 5px;
+    left: 10px;
+    -webkit-user-select: none;
+    user-select: none;
+    z-index: 200;
+  }
+  
+  #menuToggle a
+  {
+    text-decoration: none;
+    color: #232323;
+    transition: color 0.3s ease;
+  }
+  
+  #menuToggle a:hover
+  {
+    color: #af6d0a;
+  }
+  
+  
+  #menuToggle input
+  {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2; 
+    -webkit-touch-callout: none;
+  }
+  
+  
+  #menuToggle span
+  {
+    display: block;
+    width: 25px;
+    height: 2px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #333333;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                opacity 0.55s ease;
+  }
+  
+  #menuToggle span:first-child
+  {
+    transform-origin: 0 0;
+    
+  }
+  
+  #menuToggle span:nth-last-child(2)
+  {
+    transform-origin: 0 100%;
+  }
+  
+  #menuToggle input:checked ~ span
+  {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: white;
+  }
+  
+  #menuToggle input:checked ~ span:nth-last-child(3)
+  {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+  
+  #menuToggle input:checked ~ span:nth-last-child(2)
+  {
+    transform: rotate(-45deg) translate(0, -1px);
+    
+    
+  }
+  
+  #menu
+  {
+    text-align: center  ;
+    position: absolute;
+    width: 250px;
+    height: 107vh;
+    margin: -100px 0 0 -150px;
+    padding: 125px 50px 50px;
+    background: #1F1E1E;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    transform-origin: 0 0;
+    transform: translate(100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    
+  }
+  
+  #menu li
+  {
+    padding: 10px 0;
+    font-size: 18px;
+    color: white;
+  }
+  
+  #menu li i
+  {
+    
+    color: #FE771F;
+  }
+  
+  #menuToggle input:checked ~ ul
+  {
+    transform: none;
+  }
+  
+  
+  /* FOOTER */
+  .footer {
+    display: none;
+  }
+  
+  .footer-mobile {
+    background-color: #1F1E1E;
+    display: flex;
+    height: 60px;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .footer-mobile h3 {
+    font-size: 22px;
+    color: #ffffff;
+  }
+  
+  .footer-mobile i {
+    font-size: 22px;
+  }
+  
+  .icons-mobile {
+    display: flex;
+    width: 70px;
+    justify-content: space-around;
+    color: #FE771F;
+  }
+  
+  .navbar-icons {
+    display: none;
+  }
+  
+  .navbar-icons a i{
+    color: #1F1E1E
+  }
+  .nuestros-productos a {
+    text-decoration: none;
+    color: white;
+  }
+  /* HOME */
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .home_main_Categorias {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: none;
+    
+  }
+  .home_main_Categorias_Divs {
+    width: 19%;
+    display: flex;
+    background-color: #FE771F;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 5px;
+    border: #FE771F 2px solid;
+    
+  }
+  
+  
+  
+  .home_main_Categorias > div > a > img {
+    width: 15vw;
+    
+  }
+  
+  .Home_cuadrado {
+    color: #1F1E1E;
+    position: relative;
+    right: 45%;
+    bottom: 15px;
+    border-color: #1F1E1E;
+  }
+  
+  .Home_cuadrado i {
+    border-left: #1F1E1E solid 2px;
+    border-top: #1F1E1E solid 2px;
+    transform: rotate(45deg);
+  }
+  
+  .Home_Detalle_categoria {
+    height: 150vw;
+    
+    padding: 20px 4px;
+  }
+  .Home_Detalle_categoria_Pianos {
+    display: flex;
+    background-color: #1F1E1E;
+    flex-direction: column;
+    padding: 5px;
+    border-radius: 5px;
+    height: 130vw;
+    width: 97%;
+    align-items: center;
+    border: #1F1E1E solid 2px;
+    margin: auto;
+  }
+  
+  .Home_Detalle_categoria_Pianos h2 {
+    color: white;
+    margin-bottom: 10px;
+  
+  }
+  
+  .Home_Detalle_categoria_Guitarras {
+    display: none;
+    background-color: #fff;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 5px;
+    height: 130vw;
+    width: 97%;
+    align-items: center;
+    border: #727171 solid 2px;
+    position: absolute;
+    top: 60vw;
+    left: 1vw;
+  }
+  .Home_Detalle_categoria_Viento {
+    display: none;
+    background-color: #fff;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 5px;
+    height: 130vw;
+    width: 97%;
+    align-items: center;
+    border: #727171 solid 2px;
+    position: absolute;
+    top: 60vw;
+    left: 1vw;
+  }
+  .Home_Detalle_categoria_Accesorios {
+    display: none;
+    background-color: #fff;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 5px;
+    height: 130vw;
+    width: 97%;
+    align-items: center;
+    border: #727171 solid 2px;
+    position: absolute;
+    top: 60vw;
+    left: 1vw;
+  }
+  .Home_Detalle_categoria_Produccion {
+    display: none;
+    background-color: #fff;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 5px;
+    height: 130vw;
+    width: 97%;
+    align-items: center;
+    border: #727171 solid 2px;
+    position: absolute;
+    top: 60vw;
+    left: 1vw;
+  }
+  .Home_Tarjeta_producto_destacado > a > img {
+    width: 80%;
+    border-bottom: #333 solid 1px;
+    margin-bottom: 5px;
+    padding-bottom: 10px;
+  }
+  .Home_Tarjeta_producto_destacado a {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .Home_Tarjeta_producto_destacado a.uno {
+    height: 70%
+  }
+  .Home_Tarjeta_producto_destacado a.dos {
+    height: 20%;
+    text-align: center;
+  }
+  .Home_Tarjeta_producto_destacado p {
+    height: 5%;
+    font-weight: bolder;
+    
+  }
+  
+  .Home_Tarjeta_producto_destacado {
+    padding: 10px;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    border: #FE771F 4px solid;
+  
+    background-color: white;
+    border-radius: 10px;
+    
+  }
+  .Home_Boton_categoria {
+    z-index: 150;
+    width: 50%;
+    background-color: #FE771F;
+    border-radius: 5px;
+    margin-top: 10px;
+    height: 5%;
+    
+  }
+  
+  .Home_Boton_categoria a {
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .home-barra-redes-medio {
+    background-color: #1F1E1E;
+    color: #FE771F;
+    text-align: center;
+    padding: 30px 0;
+    margin-bottom: 20px;
+    font-size: 40px;
+  }
+  
+  .Home_Categ_Guitarras:focus + .Home_Detalle_categoria_Guitarras {
+    display: flex;
+  }
+  .Home_Categ_Viento:focus + .Home_Detalle_categoria_Viento {
+    display: flex;
+  }
+  .Home_Categ_Accesorios:focus + .Home_Detalle_categoria_Accesorios {
+    display: flex;
+  }
+  .Home_Categ_Produccion:focus + .Home_Detalle_categoria_Produccion {
+    display: flex;
+  }
+  .Home_Desktop {
+    display: none;
+  }
+  
+  .portada1 {
+    width: 100%;
+    height: 50vh;
+    margin-bottom: 30px;
+    
+  }
+  .portada2 {
+    display: none;
+    
+  }
+  
+  /* EditList */
+  .main-editList {
+    background-color: #1F1E1E;
+    padding: 20px 20px;
+  }
+  .editList-titulo {
+  
+    color: #FE771F;
+    font-size: 30px;
+  
+  
+  }
+  
+  .editList-elementos {
+    text-decoration: none;
+    color: white;
+    margin: 5px 0;
+  }
+  
+  /* EditList */
+  
+  /* CONTACTO */
+  .main_contacto{
+    padding: 5px;
+  }
+  
+  .main_contacto textarea{
+    border: grey solid 1px; 
+  }
+  .main_contacto h2 {
+    color: #FE771F ;
+    text-align: center;
+    margin: 20px 0px;
+    font-size: 30px;
+    font-weight: bolder;
+    margin-top: 60px;
+  }
+  .contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin: 10px 0;
+  }
+  .contact label {
+    margin-top: 10px;
+  }
+  
+  /* PRODUCT LIST */
+  .mainTitle_productList{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 30px;
+    color: #1F1E1E;
+  }
+  .main_container_prodList{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    margin: 5px 0;
+    text-decoration: none;
+    width: 100%;
+  }
+  
+  /* animacion */
+  .scale-up-hor-left {
+      -webkit-animation: scale-up-hor-left 0.4s both;
+              animation: scale-up-hor-left 0.4s both;
+  }
+  @-webkit-keyframes scale-up-hor-left {
+    0% {
+      -webkit-transform: scaleX(0.4);
+              transform: scaleX(0.4);
+      -webkit-transform-origin: 0% 0%;
+              transform-origin: 0 0;
+    }
+    100% {
+      -webkit-transform: scaleX(1);
+              transform: scaleX(1);
+      -webkit-transform-origin: 0% 0%;
+              transform-origin: 0% 0%;
+    }
+  }
+  @keyframes scale-up-hor-left {
+    0% {
+      -webkit-transform: scaleX(0.4);
+              transform: scaleX(0.4);
+      -webkit-transform-origin: 0% 0%;
+              transform-origin: 0% 0%;
+    }
+    100% {
+      -webkit-transform: scaleX(1);
+              transform: scaleX(1);
+      -webkit-transform-origin: 0% 0%;
+              transform-origin: 0% 0%;
+    }
+  }
+  /* --------------------------------- */
+  .containerProds_ProdList{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px;
+    margin: 5px 0px;
+    border-top: 1px solid rgba(80, 76, 76, 0.87);
+    border-bottom: 1px solid rgba(80, 76, 76, 0.87);
+    border-radius: 7px 7px 7px 7px;
+    height: 30%;
+    background-color: #1F1E1E;
+  }
+  .img_prodList{
+    
+    
+    max-height: 100px;
+    margin-right: 5px;
+    max-height: 100%;
+  }
+  
+  .img_prodList img {
+    width: 15vh;
+    height: 15vh;
+  }
+  
+  .infoContainer_prodList{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: solid 2px #FE771F;
+    width: 100%;
+  }
+  .title_ProdList{
+    color: #000;
+    text-decoration: none;
+  
+  }
+  .price_prodList{
+   font-size: 0.95em ;
+  }
+  .description_prodList{
+    font-size: 0.78em;
+  }
+  .containerProds_ProdList:hover{
+    box-shadow: 2px 5px 7px 5px #808080;
+  }
+  
+  
+  /* CARRITO */
+  .carrito-productos-carro {
+    display:flex;
+    justify-content: space-between ;
+    width: 100%;
+    border: 2px solid gray;
+   
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 10px;
+    background-color: #1F1E1E;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+    
+  }
+  
+  .carrito-productos-carro img{
+    width: 20%;
+    padding: 5px;
+       
+  }
+  .carrito-productos-carro h3 {
+    font-size: 5vw;
+  }
+  .carrito-productos-carro h6 {
+    font-size: 3vw;
+  }
+  .carrito-productos-carro h4 {
+    font-size: 4vw;
+  }
+  
+  div.carrito-detalle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    
+    
+  }
+  
+  .carrito-prods {
+    
+    /*border: 1px solid gray;*/
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 5px;
+    padding-left: 5px;
+    /* width: 50%;*/
+   
+  }
+  
+  
+  .carrito-boton-carro {
+    display: flex;
+    align-items: center;
+    
+  }
+  
+  .carrito-num {
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    color: #000000;
+  }
+  
+  section.carrito-resumen{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+       
+    /*border: 1px solid gray;*/
+    
+    justify-content: center;
+    align-items: center;
+    padding-right: 1px;
+    padding-left: 1px;
+    
+  }
+  
+  .carrito-main {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    
+  }
+  
+  .carrito-caja { 
+    width: 80%;
+    /*margin-top: 10px;*/
+    margin-bottom: 20px;
+    background-color: #1F1E1E;
+    border: 2px solid gray;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    color: white;
+    
+    
+  }
+  .carrito-caja p {
+    font-size: 40vw;
+  }
+  
+  .carrito-boton {
+  
+    border: 2px solid gray;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bolder;
+    margin: auto;
+    margin-top: 15px;
+    font-size: 22px;
+    width: 80%;
+    color: white;
+      border: 1px solid;
+      text-align: center;
+      padding: 10px;
+      background-color: #FE771F;
+  }
+  
+  .carrito-a1, .carrito-a2, .carrito-a3, .carrito-a4 {
+    display: flex;
+   
+    justify-content: space-between;
+    padding: 5px;
+  }
+  
+  
+  
+  
+  div.carrito-a1 p, div.carrito-a2 p, div.carrito-a3 p, div.carrito-a4 p {
+    font-size: 15px;
+  }
+  .carrito-a1 em {
+    color: #FE771F;
+  }
+  
+  .carrito-a3 {
+    border-bottom: grey solid 1px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  
+  .carrito-vacio {
+  
+    color: white;
+    height: 70vh;
+    background-color: #1F1E1E;
+    font-size: 30px;
+    text-align: center;
+    justify-content: center;
+    padding-top: 100px; 
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  
+  }
+  .carrito-vacio i {
+    margin-top: 70px;
+    font-size: 120px;
+  }
+  /*------------------Fin Carrito-----------------------------------*/
+  /* CREACION de PROD  */
+  
+  .main-crear {
+  
+    display: flex;
+    flex-direction: column;
+    background-color: #1F1E1E;
+    color: white;
+    text-align: center;
+    
+  }
+  
+  .crear-form-titulo {
+    margin-top: 20px;
+    font-weight: bolder ;
+    font-size: 30px;
+    
+    padding: 20px;
+    border-radius: 10px;
+  
+  }
+  .crear-form-body {
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+  }
+  
+  .create-form1 {
+    display: flex;
+    flex-direction: column;
+    padding: 1vw 5vw;
+    width: 80%;
+    margin: auto;
+  }
+  
+  .crear-form-label{
+    font-size: 4vw;
+    color: #FE771F;
+    font-weight: bolder;
+    margin-bottom: 2px;
+  }
+  .crear-form-button {
+    margin: 4px;
+    padding: 6px;
+    font-size: 15px;
+    border-radius: 10px;
+    font-weight: bolder;
+    background-color: #FE771F;
+    color: white;
+    text-align: center;
+    margin: auto;
+  
+  }
+  .crear-form-input {
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px;
+    margin: 2px;
+  }
+  
+  .err-rojo-creacion-prod {
+    background-color: darksalmon;
+    color:red;
+    border-radius: 5px;
+    width: 80%;
+    text-align: center;
+    margin: auto;
+    list-style-type: none;
+  }
+  
+  .insertar-imagen {
+    margin: 20px 0px;
+  }
+  
+  /* ---Fin CREACION de PROD */
+  .busqueda-productos-titulo {
+    margin-top: 30px; 
+    color: #1F1E1E ;
+    font-size: 40px;
+    padding: 0px 15px;
+    font-weight: bolder;
+    text-align: center;
+  }
+  .busqueda-productos-titulo strong{
+    margin-top: 30px; 
+    color: #FE771F ;
+    font-size: 40px;
+  }
+  .busqueda-productos {
+    color: white;
+    margin: 20px 10px;
+    border: white solid 1px;
+    padding: 5px;
+    border-radius: 15px;
+    background-color: #1F1E1E;
+  }
+  .busqueda-productos img {
+    height: 15vh;
+    width: 20vh;
+  }
+  
+  .busqueda-productos form button {
+    background-color: #1F1E1E;
+    color: #FE771F ;
+    font-size: 20px;
+    padding-left: 20px;
+    border-width: 0px;
+  
+    
+    
+  }
+  .busqueda-productos form{
+    margin-left: auto;
+    margin-right: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+    
+  }
+  
+  .ficha-carrito-prod{
+    display: flex;
+    flex-direction: row;
+    
+    
+  }
+  
+  
+  .no-hay-productos {
+    color: white;
+    margin: 40px 0px;
+  }
+  /* DETALLE DE PRODUCTO */
+  
+  .detail-body {
+    background-color: #000000;
+  }
+  
+  .detail-main {
+    margin: auto;
+      width: 90%;
+      padding: 20px 0px;
+      text-align: center;
+  }
+  
+  .detail-title {
+    font-size: 24px;
+    color: white;
+    padding: 20px;
+  
+  }
+  
+  .detail-product-image img {
+    width: 75vw;
+    border-radius: 10px;
+    
+  }
+  
+  .detail-price {
+    padding: 20px 0;
+  }
+  
+  .detail-price h3 {
+    font-size: 20px;
+    color: white;
+  }
+  
+  .detail-price p,
+  .detail-description p {
+    font-size: 15px;
+    color: white;
+  }
+  
+  .detail-description {
+    
+    height: 30vh;
+    border: 2px solid #727171;
+    border-radius: 10px;
+  }
+  
+  .detail-buy {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  .detail-buy h2 {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .detail-buy button {
+    background-color: #FE771F;
+    border: 2px solid #727171;
+    border-radius: 10px;
+    font-size: 20px;
+    color: #727171;
+    width: max-content;
+    height: 65px;
+    transition: all, 40ms;
+  }
+  .detail-main form button {
+    padding: 0px 5px;
+    font-size: 20px;
+  }
+  .detail-buy button:active {
+    background-color: #727171;
+    color: #000000;
+    border: 2px solid #000000;
+  }
+  .detail-main a {
+    text-decoration: none;
+    color: white;
+    }
+    .detail-editar-prod {
+      margin: 10px 0px;
+      font-size: 20px;
+    }
+  .fa-whatsapp {
+    color: #00a758;
+    font-size: 40px;
+  }
+  
+  .whatsapp {
+    position: fixed;
+    right: 20px;
+    bottom: 65px;
+    display: flex;
+    border: 3px solid #00a758;
+    border-radius: 60px;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* REGISTRO y LOGIN */
+  .login-error {
+    margin-top: 20px;
+  }
+  .mainDeRegistro {
+    height: 100%;
+  }
+  .mainLogIn {
+    height: 100%;
+  }
+  .cajaSignIn {
+    background-color: grey;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 20%;
+    border-radius: 15px;
+    padding: 10%;
+  }
+  .titulo {
+    text-align: center;
+    margin-top: 2vh;
+  }
+  .datosParaIngresar {
+    text-align: left;
+    margin-top: 3vh;
+    margin-left: 5vw;
+    background-color: white;
+    margin-left: 3%;
+    margin-left: 3%;
+    border-radius: 5px;
+    color: black;
+    font-weight: lighter;
+  }
+  .preguntaClave {
+    text-decoration: underline;
+    text-align: center;
+    margin-top: 10px;
+  }
+  .inicio {
+    background-color: white;
+    border: solid black 1px;
+    padding: 3px;
+    text-align: center;
+    margin-top: 10%;
+    border-radius: 10px;
+  }
+  .formu {
+    text-align: center;
+    margin-top: 100px;
+    
+    margin-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 7px;
+    color: #727171;
+  }
+  .formuRegistro {
+    text-align: left;
+    margin-top: 10%;
+    padding-right: 20px;
+    margin-bottom: 43%;
+    padding-left: 20px;
+    border-radius: 7px;
+    color: #727171;
+    
+  }
+  .enviar {
+    margin-top: 20px;
+  }
+  .cuadroBlancoDatos {
+    border-bottom: solid 1px #727171;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    /* background-color: black; */
+    color: #727171;
+    width: 90%;
+    margin: 12px 0;
+    
+  }
+  
+  
+  
+  .tituloLogin {
+    color: #727171;
+    text-align: center;
+    padding-top: 50px;
+    font-size: 35px;
+  }
+  .botonInicioPa {
+    color: white;
+    border: 1px solid;
+    text-align: center;
+    padding: 10px;
+    background-color: #FE771F;
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-top: 30px;
+  }
+  .botonInicioPa:hover {
+    background-color: #727171;
+    color: black;
+  }
+  
+  .botonInicioPa2 {
+    color: white;
+    border: 1px solid;
+    text-align: center;
+    padding: 10px;
+    background-color: #FE771F;
+    margin-top: 30px;
+  }
+  
+  .botonRegistroPa {
+    color: #727171;
+    border: 1px solid #727171;
+    text-align: center;
+    padding: 10px;
+    background-color: transparent;
+    margin-left: 40%;
+    margin-right: 40%;
+    margin-top: 70px;
+  }
+  .botonRegistroPa:hover {
+    background-color: #727171;
+    color: black;
+  }
+  .tituloRegistro {
+    color: #727171;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 35px;
+  }
+  .olvidasteLaClave {
+    color: #727171;
+    text-decoration: none;
+    font-weight: 100;
+    
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .olvidasteLaClave a{
+    
+    text-decoration: none;
+    color: #1F1E1E;
+    
+  }
+  
+  
+  .err-rojo {
+    color: red
+  }
+  /* Edición de Productos */
+  
+  
+  
+  .edit-title {
+    font-size: 22px;
+    color: #FE771F;
+    padding-top: 50px;
+    text-align: center;
+  
+  }
+  .edit-npd {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .edit-strong-black {
+    color: white;
+  }
+  
+  .edit-form{
+    display: flex;
+    justify-content: center;
+    color: #727171;
+    height: 60vh;
+  }
+  .edit-main {
+    background-color: #1F1E1E;
+  }
+  
+  .edit-items{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 80%;
+    text-align: center;
+  }
+  
+  .edit-description{
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    align-items: center;
+  }
+  
+  .edit-submit{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .edit-submit button {
+    background-color: #000000;
+    border: 2px solid #727171;
+    border-radius: 10px;
+    font-size: 20px;
+    color: #727171;
+    width: max-content;
+    transition: all, 40ms;
+  }
+  
+  .edit-submit button:active {
+    background-color: #727171;
+    color: #000000;
+    border: 2px solid #000000;
+  }
+  
+  /* perfil de usuario */
+  .info-user-profile{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 80%;
+    text-align: center;
+    margin-bottom: 10%;
+    border: #FE771F solid 2px;
+    border-radius: 10px;
+    padding: 5px;
+    max-height: 100%;
+    /* margin-top: 5%; */
+  }
+  .container-user-profile{
+    display: flex;
+    /* margin-top: 20vh;
+    margin-bottom: 30vh;*/
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2vh;
+    height: 80vh;
+    
+  
+  }
+  
+  .container-user-profile h2 {
+    max-height: 10%;
+    margin-bottom: 10px;
+    font-size: 35px;
+    color: #1F1E1E;
+  }
+  .container-user-profile h2 strong {
+    color: #FE771F;
+  }
+  .profile-img{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 5%;
+  }
+  
+  .profile-img img{
+    /* margin-right: 10px;
+    padding: 10px;*/
+    max-width: 70vw;
+    border-radius: 15px;
+    
+    
+  }
+  .info-user-profile {
+    height: 40%;
+    
+  }
+  .profile-subtitulos {
+    color: #FE771F;
+    font-weight: bolder;
+    margin-bottom: 2px;
+    height: 10%;
+   
+  }
+  
+  .profile-subtitulos-valores {
+    height: 10%;
+    padding: 2% 0px
+  }
+  
+  
+  .user-edit-delete-profile{
+    background-color: rgb(221, 216, 216);
+    border: 2px solid #000000;
+    border-radius: 5px;
+    text-align: center;
+  
+  }
+  
+  
+  /*---MEDIA QUERI---*/
+  
+  @media (min-width: 425px) {
+    /* HEADER */
+    .header{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        padding-left: 10px;
+        
+    }
+  
+    
+    .barraBusqueda{
+        display: flex;
+        width: 30%;
+        justify-content: flex-end;
+        align-items: center;
+    }
+  
+    .navbar-icons{
+        display: flex;
+        justify-content: space-around;
+        font-size: 2vw;
+        width: 15%;
+    }
+  
+    .fa-search{
+        font-size: 2vw;
+    }
+  
+    #search{
+        height: 5vh;
+        width: 40vw;
+        border-radius: 10px;
+        font-size: 2.5vh;
+        text-align: center;
+    }
+  
+    .barraBusqueda button {
+        background-color:rgba(0, 0, 0, 0);
+        border: none;
+        border-radius: 10px;
+        font-size: 20px;
+        color: #000000;
+        width: max-content;
+        padding: 10px
+    }
+  
+    header {
+          padding: 0 10px;
+        }
+    
+      .header-texto {
+        font-weight: bolder;
+        font-size: 3vw;
+        padding: 0px 2px;
+        color: white;
+        
+      }
+  
+      .menu-desktop a {
+        text-decoration: none;
+      }
+  
+    header img {
+      width: 15%;
+    }
+  
+    .header {
+      display: flex;
+      width: 100%;
+      justify-content: space-around;
+    }
+  
+    .menu-desktop {
+      display: flex;
+      justify-content: space-around;
+      width: 70%;
+    }
+  
+     /* .menu-desktop p {
+      color: #1F1E1E;
+      font-weight: bold;
+      font-size: 1.8vw;
+    }  */
+  
+    .barraBusqueda {
+      display: none;
+    }
+  
+    .bars {
+      display: none;
+    }
+  
+    .navbar-icons {
+      display: inline-block;
+      width: 20%;
+      font-size: 22px;
+      display: flex;
+      justify-content: space-around;
+    }
+    #menuToggle{
+      display: none;
+    }
+    .profile-controls{
+      display: none;
+      background-color: white ;
+      border: 1px solid #1F1E1E;
+      padding:10px;
+      border-radius: 5px;
+      position: absolute;
+      right:10vw;
+      top:8vh
+    }
+    .profile-controls a {
+      color: #FE771F ;
+      text-decoration: none;
+      list-style-type: none;
+    }
+    .nav-as:hover .profile-controls{
+      display: block;
+  
+    }
+  
+    .public-controls{
+      display: none;
+      background-color:white;
+      border: 1px solid #1F1E1E;
+      padding:10px;
+      border-radius: 5px;
+      position: absolute;
+      left:26vw;
+      top:7vh
+    }
+    .public-controls a {
+      color: #FE771F;
+      text-decoration: none;
+      list-style-type: none;
+    }
+    .publicar:hover .public-controls{
+      display: block;
+  
+    }
+  
+  /* Contactanos */
+  
+    .main_contacto form{
+      width: 80%;
+      margin: auto;
+      background-color: #1F1E1E;
+    }
+    .main_contacto form label{
+      color: #727171;
+    }
+    /* FOOTER */
+  
+    /* HOME */
+   
+  
+    .home_main_Categorias {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      /* max-width: 425px; */
+      justify-content: space-between;
+    }
+    
+    .home_main_Categorias > div > a > img {
+      width: 15vw;
+      max-width: 69px;
+    }
+   
+    .Home_Detalle_categoria {
+      height: 140vw;
+    }
+  
+    
+    .Home_Detalle_categoria_Guitarras {
+      display: none;
+      background-color: #fff;
+      flex-direction: column;
+      padding: 15px;
+      border-radius: 5px;
+      height: 130vw;
+      width: 97%;
+      align-items: center;
+      border: #727171 solid 2px;
+      position: absolute;
+      top: 50vw;
+      left: 1vw;
+      max-height: 700px;
+    }
+    .Home_Detalle_categoria_Viento {
+      display: none;
+      background-color: #fff;
+      flex-direction: column;
+      padding: 15px;
+      border-radius: 5px;
+      height: 130vw;
+      width: 97%;
+      align-items: center;
+      border: #727171 solid 2px;
+      position: absolute;
+      top: 50vw;
+      left: 1vw;
+      max-height: 700px;
+    }
+    .Home_Detalle_categoria_Accesorios {
+      display: none;
+      background-color: #fff;
+      flex-direction: column;
+      padding: 15px;
+      border-radius: 5px;
+      height: 130vw;
+      width: 97%;
+      align-items: center;
+      border: #727171 solid 2px;
+      position: absolute;
+      top: 50vw;
+      left: 1vw;
+      max-height: 700px;
+    }
+    .Home_Detalle_categoria_Produccion {
+      display: none;
+      background-color: #fff;
+      flex-direction: column;
+      padding: 15px;
+      border-radius: 5px;
+      height: 130vw;
+      width: 97%;
+      align-items: center;
+      border: #727171 solid 2px;
+      position: absolute;
+      top: 50vw;
+      left: 1vw;
+      max-height: 700px;
+    }
+    
+    
+  
+    .Home_Boton_categoria a {
+      text-decoration: none;
+      color: #fff;
+      text-align: center;
+    }
+  
+    .Home_Categ_Guitarras:focus + .Home_Detalle_categoria_Guitarras {
+      display: flex;
+    }
+    .Home_Categ_Viento:focus + .Home_Detalle_categoria_Viento {
+      display: flex;
+    }
+    .Home_Categ_Accesorios:focus + .Home_Detalle_categoria_Accesorios {
+      display: flex;
+    }
+    .Home_Categ_Produccion:focus + .Home_Detalle_categoria_Produccion {
+      display: flex;
+    }
+    .Home_Desktop {
+      display: none;
+    }
+  
+    /* CARRITO */
+  
+    /* DETALLE DE PRODUCTO */
+  
+    /* LOGIN */
+  
+    /* REGISTRO */
+  
+    /* LISTADO PRODUCTOS */
+    
+    /* PERFIL USUARIO */
+  }
+  
+  @media (min-width: 768px) {
+    
+      /* header */
+       
+      
+      header img {
+        width: 15%;
+      } 
+        
+      .menu-desktop p {
+             font-size: 25px;
+           }
+      
+      .menu-desktop a {
+             font-size: 25px;
+           }
+    
+      .barraBusqueda {
+        display: none;
+      }
+    
+      .bars {
+        display: none;
+      }
+    
+      .navbar-icons {
+        display: inline-block;
+        width: 20%;
+        font-size: 22px;
+        display: flex;
+        justify-content: space-around;
+      }
+      
+    
+      .formu {
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+        
+      }
+      .formuRegistro {
+        width: 40%;
+        margin: auto;
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+      #menuToggle{
+        display: none;
+      }
+      /*otros HOME*/
+      .Home_cuadrado {
+        display: none;
+      }
+      .portada1 {
+        display: none;
+        
+      }
+      .portada2 {
+        display: block;
+        width: 100%;
+        height: 82vh;
+        margin-bottom: 10vh;
+        
+        
+      }
+      /* LISTADO PRODUCTOS */
+      .mainTitle_productList{
+      
+        color: white;
+      }
+      /* CONTACTANOS */
+      .main_contacto form{
+        width: 30%;
+        height: 60vh;
+        justify-content: start    
+        ; } 
+      /* PERFIL USUARIO */
+      .container-user-profile{
+        width: 60%;
+        margin: auto;
+        margin-top: 20px;
+    
+      }
+      .profile-img img{
+        margin-right: 10px;
+        padding: 10px;
+        max-width: 40vw;
+        border-radius: 30px;
+      }
+    
+      .public-controls{
+        left:26vw;
+        top:8vh
+      }
+   
+    /* HOME */
+    
+    main {
+      background-color: #1F1E1E ;
+    }
+  
+    .Home_Detalle_categoria {
+      display: none;
+    }
+    .home_main_Categorias_Divs {
+      display: none;
+    }
+    .Home_Desktop {
+      display: flex;
+      flex-direction: column;
+    }
+    .Home_Desktop > h2 {
+      color: white;
+      font-size: 3em;
+      padding-left: 20px;
+    }
+  
+    .Home_Categorias_Desktop {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .Home_Categoria_Art_Desktop {
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      border-radius: 15px;
+      border: #FE771F solid 4px;
+      padding: 15px;
+      margin: 15px 30px;
+    }
+    .Home_Categoria_Art_Desktop_1 {
+      background-color: #fff;
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      border-radius: 5px;
+      border: #FE771F solid 4px;
+      padding: 15px;
+      margin: 15px 30px;
+    }
+    .Home_Categoria_Art_Desktop > img {
+      width: 450px;
+      padding: 40px;
+    }
+    .Home_Categoria_Art_Desktop_1 > img {
+      width: 450px;
+      padding: 40px;
+    }
+    .Home_Descripcion_Categoria_Desktop {
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+    }
+    .Home_Boton_Ir_Categoria_Desktop {
+      background-color: #FE771F;
+      
+      border-radius: 6px;
+      width: 170px;
+      padding: 10px;
+    }
+    .Home_Boton_Ir_Categoria_Desktop > a {
+      color: #fff;
+      text-decoration: none;
+    }
+  
+    /* CARRITO */
+    .carrito75 {
+      width: 65%;
+    }
+    section.carrito-resumen{
+      width: 35%;
+      justify-content: start;
+      padding-top: 100px;
+      padding-right: 20px;
+    }
+    .carrito-caja {
+      width: 100%;
+      
+    }
+    .busqueda-productos-titulo {
+      margin-top: 30px;
+      color: #FE771F ;
+      font-size: 50px;
+    }
+  
+    .busqueda-productos-titulo strong {
+      margin-top: 30px;
+      color: white ;
+      font-size: 50px;
+    }
+    .busqueda-productos {
+      color: white;
+      margin: 10px 10px;
+      border: white solid 1px;
+      padding: 5px;
+      border-radius: 15px;
+      background-color: #1F1E1E;
+    }
+    .busqueda-productos img {
+      height: 15vh;
+    width: 20vh;
+  }
+  
+      .carrito-main {
+        display: flex;
+        flex-direction: row;
+        background-color: white;
+        
+      }
+    /* DETALLE DE PRODUCTO */
+    .detail-description {
+      margin: 0px 15px;
+    }
+    .detail-main {
+      width: 60%;
+    }
+    .detail-product-image img {
+      width: 90%
+    }
+    /* LOGIN */
+    .olvidasteLaClave a{
+      color: white;
+    }
+    
+  
+  
+  
+    /* REGISTRO */
+    .crear-form-label{
+      font-size: 20px;
+         
+    }
+    
+    .cuadroBlancoDatos {
+      width: 100%;
+    
+      
+    }
+  
+    /* LISTADO PRODUCTOS */
+   
+    .main-crear form {
+      width: 80%;
+      margin: auto;
+    }
+    .crear-form-titulo {
+      font-size: 50px;
+      padding: 30px;
+    }
+    .crear-form-button {
+      font-size: 30px;
+    }
+    .edit-form {
+      width: 40%;
+      margin: auto;
+    }
+    /* PERFIL USUARIO */
+  }
+  
+  @media (min-width: 1024px) {
+    /* header */
+  
+    .header {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      align-items: center;
+    }
+  
+    .menu-desktop {
+      width: 50%;
+      justify-content: space-around;
+    }
+  
+   
+    .barraBusqueda {
+      display: flex;
+      width: 30%;
+      justify-content: flex-end;
+      align-items: center;
+    }
+  
+    .navbar-icons {
+      display: flex;
+      justify-content: space-around;
+      font-size: 2vw;
+      width: 15%;
+    }
+  
+    .fa-search {
+      font-size: 2vw;
+    }
+  
+   
+  
+    .barraBusqueda button {
+      background-color: rgba(0, 0, 0, 0);
+      border: none;
+      border-radius: 10px;
+      font-size: 20px;
+      color: #1F1E1E;
+      width: max-content;
+      padding: 10px;
+    }
+  
+    .public-controls{
+      left:18vw;
+      top:8vh
+    }
+  
+    /* FOOTER */
+    .footer-mobile {
+      display: none;
+    }
+  
+    .footer {
+      display: flex;
+      background-color: #FE771F;
+      justify-content: space-around;
+      align-items: center;
+      font-size: 1.4vw;
+      color: white;
+    }
+    .footer div ul li a{
+      color: white;
+    }
+    .datos { color: white;}
+  
+    .footer img {
+      width: 10%;
+    }
+  
+    .footer ul li a {
+      text-decoration: none;
+      color: #000000;
+    }
+  
+    .footer ul li {
+      list-style-type: none;
+      text-align: center;
+    }
+  
+    
+    /* HOME */
+   
+    /* CARRITO */
+    
+  .carrito-productos-carro {
+    display:flex;
+    justify-content: space-between ;
+    width: 100%;
+    border: 2px solid gray;
+   
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 10px;
+    background-color: black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+    
+  }
+  
+  .carrito-productos-carro img{
+    width: 20%;
+    padding: 5px;
+       
+  }
+  .carrito-productos-carro h3 {
+    font-size: 5vw;
+  }
+  .carrito-productos-carro h6 {
+    font-size: 3vw;
+  }
+  .carrito-productos-carro h4 {
+    font-size: 4vw;
+  }
+  
+  div.carrito-detalle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    
+    
+  }
+  
+  .carrito-prods {
+    
+    /*border: 1px solid gray;*/
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 5px;
+    padding-left: 5px;
+    /* width: 50%;*/
+   
+  }
+  
+  
+  
+  
+  .carrito-num {
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    color: #000000;
+  }
+  
+  
+  
+  
+  
+  
+  
+  /*------------------Fin Carrito-----------------------------------*/
+  /* DETALLE DE PRODUCTO */
+  
+  
+    .whatsapp {
+      width: 5vw;
+      height: 5vw;
+      bottom: 8vw;
+    }
+  
+    .fa-whatsapp {
+      font-size: 4vw;
+    }
+  
+    
+  
+    /* LOGIN */
+    .formu {
+      width: 30%;
+      
+      
+    }
+    /* REGISTRO */
+    .crear-form-body {
+      width: 70%;
+    }
+    .formuRegistro {
+      width: 30%;
+      
+    }
+    /* LISTADO PRODUCTOS */
+  
+    /* PERFIL USUARIO */
+  }
+  
