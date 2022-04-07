@@ -36,6 +36,10 @@ module.exports = (sequelize, DataTypes)=>{
         monto: {
             type: DataTypes.INTEGER,
             allowNull: false
+        },
+        user_id: {
+            type: DataTypes.INTEGER,
+            foreignKey: true
         }
 
     }
@@ -45,12 +49,12 @@ module.exports = (sequelize, DataTypes)=>{
     }
         
     const Expediente = sequelize.define(alias, cols, config);
-  /*  Expediente.associate= function(models){
-        Expediente.belongsTo(models.Usuarios, {
-            as: 'usuarios',
-            foreignKey: 'expediente_id',
+    Expediente.associate= function(models){
+        Expediente.belongsTo(models.User, {
+            as: 'user',
+            foreignKey: 'user_id'
         })
-    } */
+    } 
     return Expediente
     
     }

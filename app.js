@@ -3,17 +3,20 @@ const app = express();
 const path = require("path");
 const methodOverride = require('method-override');
 const session = require('express-session');
+const cookieParser = require("cookie-parser")
 
 //rutas
 const mainRouter = require("./routes/mainRouter");
 const usersRouter = require("./routes/usersRoutes");
 const expedientesRouter = require('./routes/expedientesRouter');
 
+
 //app set
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, "views"));
 
 //funciones que capturan lo ingresado en el formulario
+app.use(cookieParser());
 app.use(express.urlencoded({ extended: false}));
 app.use(express.json());
 

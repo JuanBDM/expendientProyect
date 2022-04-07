@@ -140,3 +140,9 @@ textarea{
 	border-radius: 4px;
 	background-color: lightcyan;
 }
+
+.text-danger {
+	color:#A01313;
+	margin-top: 12px;
+	font-size: 14px;
+}

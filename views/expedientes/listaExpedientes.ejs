@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/list.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    rel="stylesheet" />
     <title>Lista Expedientes</title>
 </head>
 
@@ -12,24 +14,34 @@
     
 <main>
 <!-- Esta es la pagina de producto "completar" -->
-<div>
-    <label for="gsearch">Buscar expediente: </label>
-    <input type="search" id="gsearch" name="gsearch">
-    <input type="submit" value="Submit">
+
+
+<div class="search-input">
+    <a href="" target="_blank" hidden></a>
+    <input type="text" placeholder="Buscar...">
+    <div class="autocom-box">
+    </div>
+    <div class="icon" color="white"><i class="fas fa-search"></i></div>
 </div>
+
+
 <h3 class="mainTitle_productList"><%= expedientes.asunto %> </h3>
 <% for(let i = 0; i < expedientes.length; i++) { %>
     <div class="containerProds_ProdList">
         <div class="infoContainer_prodList">
-            <h4 class="title_ProdList"> Proveedor: <%= expedientes[i].proveedor %></h4>
+            <h4 class="title_ProdList">  <%= expedientes[i].proveedor %></h4>
             <p class="price_prodList">Fecha: <%= expedientes[i].fecha_estado %> </p>
             <p class="description_prodList">Estado actual: <%= expedientes[i].estado %></p>
         </div>
-        <button><a href="/expedientes/detalle/<%= expedientes[i].id %>" class="editar"> Actualizar expedientes</a></button>
+        <button><a href="/expedientes/detalle/<%= expedientes[i].id %>" class="editar">Detalle</a></button>
         <button><a href="/expedientes/edit/<%= expedientes[i].id %>" class="editar"> edit</a></button>
+        <button><a href="/expedientes/create/<%= expedientes[i].id %>" class="editar"> Crear expediente</a></button>
     </div>
 <% } %>
 </a> 
 </main>
+<script src="/js/buscador.js"></script>
+<script src="/js/suggestions.js"></script>
 
 </body>
+</html>

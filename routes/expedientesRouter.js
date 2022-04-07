@@ -4,12 +4,16 @@ const path = require('path');
 const expedientesController = require("../controllers/expedientesController");
 
 
+
+//middlewares
+const validacionFormExp = require('../middlewares/validateExpForm')
+
 // all files
 router.get('/listaExpedientes', expedientesController.expedientes)
 
 //Register expediente
-router.get('/create', expedientesController.create);
-router.post("/create", expedientesController.store );
+router.get('/create',  expedientesController.create);
+router.post("/create", validacionFormExp, expedientesController.store );
 
 
 //editar expediente

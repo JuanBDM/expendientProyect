@@ -40,38 +40,79 @@
                 <div class='field'>
                     <label>N° Expediente A131</label>
 					
-                    <input name='numero_expedient' type='number' required minlength="1" maxlength="4" />
+                    <input name='numero_expedient' type='number' required minlength="1" maxlength="4"  <% if(locals.oldData) { %>
+						value = <%= oldData.numero_expedient %> 
+					<% } %> > 
+					<% if (locals.errors && errors.numero_expedient) { %>
+						<div class="text-danger">
+							<%= errors.numero_expedient.msg %> 
+						</div>
+					<% } %>
                 </div>			
 
             <div class='field'>
 				<label for="">
                     <span>Fecha inicio</span>
-                    <input type="date" name="fecha_inicio" />
+                    <input type="date" name="fecha_inicio"  <% if(locals.oldData) { %>
+						value = <%= oldData.fecha_inicio %> 
+					<% } %> > 
+					<% if (locals.errors && errors.fecha_inicio) { %>
+						<div class="text-danger">
+							<%= errors.fecha_inicio.msg %> 
+						</div>
+					<% } %>
                 </label>
             </div>
             
 			<div class='field'>
 				<label>Tipo de expediente</label>
-				<select name='tipo_expediente' required>
+				<select name='tipo_expediente'  <% if(locals.oldData) { %>
+					value = <%= oldData.tipo_expediente %> 
+				<% } %> >
+				
 					<option selected disabled>Sel. una opción</option>
 					<option>Compra</option>
 					<option>Comisión</option>
 					<option>Servicio</option>
 				</select>
+				<button type="button" onclick="ocultarMonto()">Servicio</a></button>
+				<% if (locals.errors && errors.tipo_expediente) { %>
+					<div class="text-danger">
+						<%= errors.tipo_expediente.msg %> 
+					</div>
+				<% } %>
 			</div>
+
 			<div class='field'>
 				<label spellcheck= "true">Asunto</label>
-				<input name='asunto' type='text'autocomplete />
+				<input name='asunto' type='text'autocomplete   <% if(locals.oldData) { %>
+					value = <%= oldData.asunto %> 
+				<% } %> >
+				<% if (locals.errors && errors.asunto) { %>
+					<div class="text-danger">
+						<%= errors.asunto.msg %> 
+					</div>
+				<% } %>
 			</div>
 			<div class='field'>
 				<label spellcheck= "true">Proveedor:</label>
-				<input name='proveedor' type='text' autocomplete />
+				<input name='proveedor' type='text' autocomplete  <% if(locals.oldData) { %>
+					value = <%= oldData.proveedor %> 
+				<% } %> > 
+
+				<% if (locals.errors && errors.proveedor) { %>
+					<div class="text-danger">
+						<%= errors.proveedor.msg %> 
+					</div>
+				<% } %>
 			</div>
 			
 			
 			<div class='field'>
 				<label>Estado</label>
-				<select name='estado' required>
+				<select name='estado'  <% if(locals.oldData) { %>
+					value = <%= oldData.estado %> 
+				<% } %> >
 					<option selected disabled>Sel. una opción</option>
 					<option>Inicio</option>
 					<option>SG</option>
@@ -85,20 +126,45 @@
                     <option>Tesorería</option>
 					<option>Pago</option>
 				</select>
+				<% if (locals.errors && errors.estado) { %>
+					<div class="text-danger">
+						<%= errors.estado.msg %> 
+					</div>
+				<% } %>
 			</div> 
 
             <div class='field'>
 				<label for="">
                     <span>Fecha de Estado</span>
-                    <input type="date"  name="fecha_estado" />
+                    <input type="date"  name="fecha_estado" 
+					<% if(locals.oldData) { %>
+						value = <%= oldData.fecha_estado %> 
+					<% } %> >
+					<% if (locals.errors && errors.fecha_estado) { %>
+						<div class="text-danger">
+							<%= errors.fecha_estado.msg %> 
+						</div>
+					<% } %>
                 </label>
-            </div>
+            </div>	
 
-			<div class="field">
+			<div  id="premio" >
 				<label for="precio">Monto</label>
-				<input type="text" name="monto" placeholder="$"> 
-			
-			 </div> 
+				<input type="text" name="monto" placeholder="$"  <% if(locals.oldData) { %>
+					value = <%= oldData.monto %> 
+				<% } %> >
+				<% if (locals.errors && errors.monto) { %>
+					<div class="text-danger">
+						<%= errors.monto.msg %> 
+					</div>
+				<% } %>
+				 </div> 
+
+				 <script type="text/javascript">
+					function ocultarMonto() {
+						document.getElementById('premio').style.display = 'none';
+					}
+				</script>
 
 			<div class='submit'>
 				<button>
