@@ -1,0 +1,48 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/list.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Noto+Sans&display=swap" rel="stylesheet">
+    <title>Lista Expedientes</title>
+</head>
+
+<body>
+    
+<main>
+<!-- Esta es la pagina de producto "completar" -->
+            <h1> ¡LISTADO DE EXPEDIENTES! </h1>
+<div>
+    <label for="gsearch">Buscar expediente: </label>
+    <input type="search" id="gsearch" name="gsearch">
+    <input type="submit" value="Submit">
+</div>
+
+
+    <button class="create1"><a href="/expedientes/create/" class="create">CREAR NUEVO EXPEDIENTE</a></button>
+
+
+<h3 class="mainTitle_productList"><%= expedientes.asunto %> </h3>
+<% for(let i = 0; i < expedientes.length; i++) { %>
+    <div class="containerProds_ProdList">
+        <div class="infoContainer_prodList">
+            <h4 class="title_ProdList"> N° Expediente: <%= expedientes[i].numero_expedient   %></h4>
+            <h4 class="title_ProdList2"> Proveedor: <%= expedientes[i].proveedor %></h4>
+            <p class="title_ProdList3">Estado: <%= expedientes[i].estado %></p>
+            <p class="title_ProdList4">Fecha de estado: <%= expedientes[i].fecha_estado %> </p>
+        </div>
+        <div class="botones">
+        <button><a href="/expedientes/detalle/<%= expedientes[i].id %>" class="detalle" >DETALLE</a></button>
+        
+        <button><a href="/expedientes/edit/<%= expedientes[i].id %>" class="editar" >EDITAR</a></button>
+    </div>
+    </div>
+<% } %>
+</a> 
+</main>
+
+</body

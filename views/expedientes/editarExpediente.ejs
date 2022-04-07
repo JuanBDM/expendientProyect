@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Esta descripción es la que aparece en los buscadores debajo de la URL" />
+	<link href="/css/ediar-Expediente.css" rel="stylesheet" type="text/css" />
+	<link href="/css/formulario.css" rel="stylesheet" type="text/css" />
+	<link href="./css/resets.css" rel="stylesheet" type="text/css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Noto+Sans&display=swap" rel="stylesheet">
+	<title>Crear expediente</title>
+</head>
+
+
+<body>
+
+    
+        <h1 class="elh1">¡Modifiquemos el expediente!</h1>
+
+
+        <form action="/expedientes/edit/<%= editarExpediente.id %>?_method=PATCH" method="POST">
+
+            <div class='registros'>
+                <label>Estado</label>
+                <select value="<%= editarExpediente.estado%>" name='estado' class="opciones" required>
+                    <option selected disabled>Sel. una opción</option>
+                    <option>Inicio</option>
+                    <option>SG</option>
+                    <option>Pliego y Publicación</option>
+                    <option>Apertura y Preadjudicación</option>
+                    <option>Dictamen</option>
+                    <option>Resolución</option>
+                    <option>Tribunal de Cuenta</option>
+                    <option>Orden de Pago</option>
+                    <option>Contaduria</option>
+                    <option>Tesorería</option>
+                    <option>Pago</option>
+                </select>
+            
+
+            
+                <label for="">
+                    <span>Fecha de Estado</span>
+                    <input class="fecha" value="<%= editarExpediente.fecha_estado%>"  type="date"  name="fecha_estado" />
+                </label>
+            </div>
+
+            <button class="editar" type="submit" onclick="return confirm('¿Estas seguro que quieres modificar el expediente?')">Editar Expediente</button>
+       
+
+       <!-- <form action="/expedientes/delete/<%= editarExpediente.id %>?_method=DELETE" method="post" >
+            <button class="eliminar" type="submit" onclick="return confirm('¿Estas seguro?')">Eliminar</button>
+        </form>-->
+        
+
+
+
+    
+</body>
+
+</html>
